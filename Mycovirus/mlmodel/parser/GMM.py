@@ -234,7 +234,6 @@ def cal_accuracy(labels, predictions):
 
 
 def PCA_plot(x, y, n_dim, path):
-    x = StandardScaler().fit_transform(x)
     pca = PCA(n_components=n_dim)
     principalComponents = pca.fit_transform(x)
     principalDf = pd.DataFrame(data=principalComponents, columns=['principal component 1', 'principal component 2'])
